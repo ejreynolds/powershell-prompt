@@ -24,7 +24,6 @@ set-variable -name HOME -value (resolve-path $env:Home) -force
 # Setup BASH style alias
 . ./aliases.ps1
 
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gca="git commit -a"
 alias gd="git diff"
 alias gco="git checkout"
@@ -32,6 +31,10 @@ alias gs="git status -sb"
 alias gpush="git push origin HEAD"
 alias gpull="git pull --prune"
 
+function glog {
+  git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+}
+ 
 ####
 # Set up a simple prompt, adding the git prompt parts inside git repos
 function prompt {
