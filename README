@@ -1,0 +1,7 @@
+This is Erik's PowerShell setup.
+
+First, run:  Set-ExecutionPolicy RemoteSigned
+
+Then reinstall PsGet (if you want, it is included): (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+
+If you install Posh-Git, remove the example profile PS1 file so it doesn't screw up the prompt.
