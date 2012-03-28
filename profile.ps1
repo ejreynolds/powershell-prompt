@@ -15,7 +15,7 @@ Import-Module posh-git
 # 2) Sets $env:Home to the same thing
 # 3) Force sets '$HOME' to whatever $env:Home is (useful for programs and scripts)
 # 4) Changes the Home property of the ProviderInfo object for the FileSystem provider
-$env:Homepath = "C:\Users\ereynolds"				# Notice the lack of a trailing '\'.  This is important or else the '~' replacement won't work!
+$env:Homepath = "C:\Users\erik"				# Notice the lack of a trailing '\'.  This is important or else the '~' replacement won't work!
 $env:Home = $env:Homepath
 set-variable -name HOME -value (resolve-path $env:Home) -force
 (get-psprovider FileSystem).Home = $HOME
